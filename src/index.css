@@ -1,0 +1,68 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #e8f2f4;
+  background: #080b12;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  --bg: #080b12;
+  --surface: rgba(16, 23, 34, 0.88);
+  --surface-raised: #131d29;
+  --border: rgba(99, 235, 228, 0.2);
+  --text: #a9bec5;
+  --text-bright: #e8f2f4;
+  --cyan: #5ff5e5;
+  --pink: #ff4fa3;
+  --mono: "Consolas", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(32, 94, 115, 0.19), transparent 38rem),
+    radial-gradient(ellipse at 100% 32%, rgba(116, 34, 88, 0.12), transparent 34rem),
+    linear-gradient(145deg, #080b12 0%, #0b111b 55%, #090b13 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.15;
+  background-image: linear-gradient(rgba(95, 245, 229, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(95, 245, 229, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+button { font: inherit; }
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1, h2, p { margin-top: 0; }
+
+h1, h2 {
+  color: var(--text-bright);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+
+h1 { margin-bottom: 0; font-size: clamp(1.65rem, 3vw, 2.3rem); }
+h2 { margin-bottom: 0; font-size: clamp(1.25rem, 2vw, 1.65rem); }
+p { margin-bottom: 0; }
+
+::selection { color: #071010; background: var(--cyan); }
+
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
