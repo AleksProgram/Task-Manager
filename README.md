@@ -1,16 +1,46 @@
-# React + Vite
+# Task Manager — Neon Grid
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Киберпанк‑менеджер задач с неоновым интерфейсом. Приложение помогает просматривать список задач, отмечать их выполнение и быстро фильтровать список.
 
-Currently, two official plugins are available:
+## Возможности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Просмотр общего количества задач и количества выполненных задач.
+- Добавление новой задачи.
+- Переключение статуса задачи между выполненной и невыполненной.
+- Удаление отдельной задачи.
+- Фильтрация списка: все задачи, выполненные или невыполненные.
+- Очистка всего списка или только выполненных задач.
+- Цветовая индикация статуса: зелёный для выполненных задач, красный для невыполненных.
 
-## React Compiler
+## Технологии и устройство
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** — интерфейс построен из компонентов: шапки, подвала, статистики, списка и карточки задачи.
+- **JavaScript и React Hooks** — состояние задач и выбранного фильтра хранится в `useState`.
+- **Vite** — запуск локального сервера разработки и сборка приложения.
+- **CSS** — адаптивная сетка, оформление карточек и кнопок, неоновые акценты, контрастная цветовая палитра, фокус для клавиатурной навигации и поддержка настройки уменьшения анимации.
+- **SVG favicon** — собственная иконка в стиле интерфейса.
 
-## Expanding the Oxlint configuration
+Данные демонстрационных задач находятся в `src/data/initialTasks.js`. Изменения хранятся в состоянии приложения и сбрасываются при перезагрузке страницы.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Визуальный стиль сайта был выполнен с помощью **CODEX**. При оформлении сохранена существующая техническая логика приложения.
+
+## Запуск проекта
+
+Установите зависимости и запустите сервер разработки:
+
+```bash
+npm install
+npm run dev
+```
+
+Для production-сборки используйте:
+
+```bash
+npm run build
+```
+
+Для локального просмотра собранного приложения:
+
+```bash
+npm run preview
+```
