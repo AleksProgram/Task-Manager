@@ -76,9 +76,9 @@ function App() {
                     </div>
 
                     <div className="task-actions">
-                        <button className="button-primary" onClick={addTask}>Добавить задачу</button>
-                        <button className="button-secondary" onClick={clearTasks}>Очистить список</button>
-                        <button className="button-secondary" onClick={clearCompletedTasks}>Очистить выполненные задачи</button>
+                        <button className="button-primary" onClick={addTask}>Add Task</button>
+                        <button className="button-secondary" onClick={clearTasks}>Clear list</button>
+                        <button className="button-secondary" onClick={clearCompletedTasks}>Clear completed tasks</button>
                     </div>
                 </section>
             </main>

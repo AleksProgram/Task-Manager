@@ -7,8 +7,8 @@ function TaskItem({task, deleteTask, toggleTask}) {
                     {task.completed ? "Completed" : "Not Completed"}
                 </span>
             </p>
-            <button onClick={() => deleteTask(task.id)}>Удалить задачу</button>
-            <button className="status-toggle" onClick={() => toggleTask(task.id)}>Изменить статус</button>
+            <button onClick={() => deleteTask(task.id)}>Delete Task</button>
+            <button className="status-toggle" onClick={() => toggleTask(task.id)}>Change Status</button>
         </div>
     )
 }
